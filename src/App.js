@@ -14,7 +14,9 @@ import Home from './components/Home';
 import Feed from './components/Feed';
 import Profile from './components/Profile';
 import Header from './components/Header';
-import FeedPost from './components/FeedPost'
+import FeedPost from './components/FeedPost';
+import Login from './components/Login';
+import AddGoal from './components/AddGoal';
 import './App.css';
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
           <Route path="/Home" element= {<Home/>}></Route>
           <Route path="/Feed" element={<Feed/>}></Route>
           <Route path="/Profile" element={<Profile/>}></Route>
+          <Route path="/" element={<Login/>}></Route>
+          <Route path="/AddGoal" element={<AddGoal/>}></Route>
         </Routes>
       </Router>
     </div>
