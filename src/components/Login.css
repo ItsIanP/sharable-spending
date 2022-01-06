@@ -1,0 +1,30 @@
+
+input {
+    width: 500px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 20px solid #791605;
+    border-radius: 10px;
+    background-color: #791605;
+    color: white;
+    margin-bottom: 70px;
+}
+
+h1 {
+    color: #791605;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    font-size: large;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
