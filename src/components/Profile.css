@@ -1,0 +1,24 @@
+.overall {
+    align-content: center;
+}
+.container {
+    padding: 20px;
+    align-content: center;
+}
+.space {
+    float: left;
+    width: 20%;
+    padding: 5px;
+}
+.profilePic {
+    float: left;
+    width: 25%;
+    padding: 20px;
+}
+
+.acctInfo {
+    float: left;
+    width: 25%;
+    padding: 20px;
+}
+
