@@ -1,18 +1,22 @@
+import { findByLabelText } from '@testing-library/react';
 import React, { Component } from 'react';
 import CanvasJSReact from '../canvasJS/canvasjs.react';
+import './PieChart.css';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 //Data is hard-coded right now.
  
-class PieChartWithCustomization extends Component {
+class PieChart extends Component {
 	render() {
 		const options = {
+			width: 400,
+			height: 420,
 			theme: "dark2",
 			animationEnabled: true,
 			exportFileName: "Spending",
 			exportEnabled: true,
 			title:{
-				text: "This Year's Spending"
+				text: "Username's Spending"
 			},
 			data: [{
 				type: "pie",
@@ -33,8 +37,7 @@ class PieChartWithCustomization extends Component {
 		}
 		
 		return (
-		<div>
-			<h1>React Pie Chart with Index Labels Placed Inside</h1>
+		<div className = "pie">
 			<CanvasJSChart options = {options} 
 				/* onRef={ref => this.chart = ref} */
 			/>
@@ -44,4 +47,4 @@ class PieChartWithCustomization extends Component {
 	}
 }
 
-export default PieChartWithCustomization;
+export default PieChart;

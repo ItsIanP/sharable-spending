@@ -30,8 +30,8 @@ const AddGoal = () => {
 
     return (
         <div>
+            <h1>Add Your Goal</h1>
             <div className = "form">
-                <h1>Add Your Goal</h1>
                 <label>Categories</label>
                 <select onChange={categoryHandler}>           
                         <option>Shopping</option>

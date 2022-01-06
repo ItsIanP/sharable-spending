@@ -7,6 +7,7 @@ var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 class ColumnChart extends Component {
 		render() {
 		const options = {
+			width: 800,
 			title: {
 				text: "Basic Column Chart"
 			},
@@ -28,7 +29,6 @@ class ColumnChart extends Component {
 		
 		return (
 		<div>
-			<h1>React Column Chart</h1>
 			<CanvasJSChart options = {options} 
 				/* onRef={ref => this.chart = ref} */
 			/>
