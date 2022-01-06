@@ -14,11 +14,17 @@ import Home from './components/Home';
 import Feed from './components/Feed';
 import Profile from './components/Profile';
 import Header from './components/Header';
+<<<<<<< HEAD
 import FeedPost from './components/FeedPost';
-import Login from './components/Login';
 import AddGoal from './components/AddGoal';
 import Register from './components/Register';
+=======
+import FeedPost from './components/FeedPost'
+import AddGoal from './components/AddGoal'; 
+import Register from './components/Register'; 
+>>>>>>> fd3eca52acd0fd66debad163801a144e24496ef1
 import './App.css';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -29,9 +35,12 @@ function App() {
           <Route path="/Home" element= {<Home/>}></Route>
           <Route path="/Feed" element={<Feed/>}></Route>
           <Route path="/Profile" element={<Profile/>}></Route>
-          <Route path="/" element={<Login/>}></Route>
           <Route path="/AddGoal" element={<AddGoal/>}></Route>
           <Route path="/Register" element={<Register/>}></Route>
+<<<<<<< HEAD
+=======
+          <Route path="/" element={<Login/>}></Route>
+>>>>>>> fd3eca52acd0fd66debad163801a144e24496ef1
         </Routes>
       </Router>
     </div>
