@@ -1,0 +1,68 @@
+.container {
+    width:100%;
+    border:2px;
+    margin: 0 auto;
+    padding:10px;
+}
+
+
+
+/* .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.column1 {
+    border:2px;
+    width:32%;
+    float: left;
+    height:100%; 
+    margin-left:6%;
+    margin-right:2%; 
+}
+
+.column2 {
+    border:2px;
+    width:45%;
+    float:left;
+    height:100%;
+    margin-left:2%; 
+    margin-right:6%;  
+}
+
+input {
+    display: flex;
+    width: 260px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+select {
+    display: flex;
+    width: 260px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+label {
+    display: flex;
+    font-size: 18px;
+    margin-bottom: 10px; 
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+button {
+    display: flex;
+    margin-top: 15px;
+    margin-left: 190px;
+}
+
+.goals {
+    font-size: 15px;
+    margin-right: 200px;
+}
