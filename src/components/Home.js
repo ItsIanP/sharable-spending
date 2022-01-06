@@ -63,6 +63,7 @@ const Home = () => {
                 <h1>Pie Chart</h1>
             </div>
         </div>
+    </div>
     )
 }
 
