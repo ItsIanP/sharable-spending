@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+//dependencies
+import React, { Component } from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import CanvasJSReact from './canvasJS/canvasjs.react'; //This is used for the pie charts.
+
+//components
+import PieChartWithCustomization from './components/PieChart'; //Pie Chart
+import ColumnChart from './components/ColumnChart'; // Column Chart
+import Home from './components/Home';
+import Feed from './components/Feed';
+import Profile from './components/Profile';
+import Header from './components/Header';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header/>
+        <Routes>
+          <Route path="/Home" element= {<Home/>}></Route>
+          <Route path="/Feed" element={<Feed/>}></Route>
+          <Route path="/Profile" element={<Profile/>}></Route>
+        </Routes>
+      </Router>
     </div>
   );
 }
