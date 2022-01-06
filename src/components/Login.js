@@ -19,6 +19,10 @@ const Login = () => {
         navigate("../home", ({replace: true}));
     }
 
+    const registerHandler = (event) => {
+        navigate("../Register", ({replace: true}));
+    }
+
 
     return (
         <div>
@@ -29,6 +33,7 @@ const Login = () => {
                 <label>Password</label>
                 <input onChange={passwordHandler}></input>
                 <button onClick={loginHandler}>Login</button>
+                <button onClick={registerHandler}>Register</button>
             </div>
         </div>
     )
