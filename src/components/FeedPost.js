@@ -1,7 +1,7 @@
 import React from 'react'
 import './FeedPost.css'
 import PieChart from './PieChart';
-
+//feed post
 
 const FeedPost = () => {
     return (
