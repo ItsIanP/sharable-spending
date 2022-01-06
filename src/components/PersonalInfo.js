@@ -12,16 +12,12 @@ const PersonalInfo = ({text, type, placeholder, children, ...props}) => {
     return (
         <section {...props}>
             {isEditing ? (
-                <div
-                    onBlur={() => setEditing(false)}
-                    onKeyDown={e => handleKeyDown(e, type)}
-                >
+                <div onBlur={() => setEditing(false)} onKeyDown={e => handleKeyDown(e, type)}>
                     {children}
                 </div>
-            ) : (
-                <div
-                    onClick={() => setEditing(true)}
-                >
+            ):
+                (
+                <div onClick={() => setEditing(true)}>
           <span>
             {text || placeholder || "Editable content"}
           </span>
