@@ -4,8 +4,9 @@ import './Goal.css'
 const Goal = ({category, budget}) => {
     return (
         <div>
-            <p>{category}</p>
-            <p>{budget}</p> 
+            <h3>Category : Budget</h3>
+            <p>{category} : {budget}</p>
+            
         </div>
     )
 }
