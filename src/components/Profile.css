@@ -32,5 +32,29 @@ p {
 
 .username {
     font-weight: bolder;
+    padding: 5px;
 
+}
+
+.email {
+    padding: 5px;
+}
+
+.phone {
+    padding: 5px;
+}
+
+.address {
+    padding: 5px;
+}
+.fieldGrid {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-gap: 1px;
+    align-content: center;
+}
+
+.fieldGrid label {
+    text-align: right;
+    font-weight: bold;
 }
