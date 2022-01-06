@@ -22,3 +22,15 @@
     padding: 20px;
 }
 
+.infoHeader {
+    line-height: 75%;
+}
+
+p {
+    font-style: italic;
+}
+
+.username {
+    font-weight: bolder;
+
+}

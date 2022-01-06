@@ -1,16 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './PersonalInfo.css';
 
-const PersonalInfo = () => {
-    return (
-        <div>
-            <h1>Account Info</h1>
-            <p>Username</p>
-            <p>Email</p>
-            <p>Phone</p>
-            <p>Address</p>
+{/*Editable Inline Text - Following https://blog.logrocket.com/building-inline-editable-ui-in-react/*/}
 
-        </div>
+const PersonalInfo = ({text, type, placeholder, children, ...props}) => {
+    const [isEditing, setEditing] = useState(false);
+
+    const handleKeyDown = (event, type) => {
+
+    }
+    return (
+        <section {...props}>
+            {isEditing ? (
+                <div
+                    onBlur={() => setEditing(false)}
+                    onKeyDown={e => handleKeyDown(e, type)}
+                >
+                    {children}
+                </div>
+            ) : (
+                <div
+                    onClick={() => setEditing(true)}
+                >
+          <span>
+            {text || placeholder || "Editable content"}
+          </span>
+                </div>
+            )}
+        </section>
     );
 };
 
