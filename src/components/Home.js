@@ -59,8 +59,10 @@ const Home = () => {
                         </tr>
                     </table>
                 </div>
-            <div class = "column">
-                <h1>Pie Chart</h1>
+
+                <div class = "column2">
+                    <h1>Pie Chart</h1>
+                </div>
             </div>
         </div>
     )
