@@ -29,8 +29,8 @@ const AddGoal = () => {
 
 
     return (
-        <div>
-            <div className = "form">
+        <div className="container">
+            <div className = "column1">
                 <h1>Add Your Goal</h1>
                 <label>Categories</label>
                 <select onChange={categoryHandler}>           
@@ -40,14 +40,23 @@ const AddGoal = () => {
                 </select>
                 <label>Budget Limit</label>
                 <input onChange={budgetHandler}></input>
-                <button onClick={addGoalHandler}>Add Goal</button>
+               
+                    <button onClick={addGoalHandler}>Add Goal</button>
+                
             </div>
-
-            <h1>Your Current Goals this Month:</h1>
-            <div className="goals">
-                {data.map((goal) => (
-                    <Goal category={goal.category} budget={goal.budget}/>
-                ))}
+            <div className="column2">
+                <h1>Your Current Goals:</h1>
+                <h3>Category : Budget</h3>
+                <div>
+                    {data.map((goal) => (
+                        
+                        <div className="goals">
+                        <ol>
+                        <li><Goal category={goal.category} budget={goal.budget}/></li>
+                        </ol>
+                        </div>
+                    ))}
+                </div>
             </div>
 
         </div>
