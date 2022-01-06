@@ -6,7 +6,7 @@ import {data} from '../data/ExpenseData'
 const Home = () => {
     return (
         <div class = "container">
-            <h1>Sharebale Spending! Homepage</h1>
+            <h1>Shareable Spending! Homepage</h1>
             <div class = "row">
                 <div class = "column1">
                     <h1>Balance</h1>
