@@ -5,7 +5,6 @@ const Goal = ({category, budget}) => {
     return (
         <div className="container">
             <p>{category} : {budget}</p>
-            
         </div>
     )
 }

@@ -1,33 +1,8 @@
-import React, {useState} from 'react'
-import Goal from './Goal'
-import {data} from '../data/GoalData'
-import { useNavigate } from 'react-router-dom'
+import React from 'react'
 import './AddGoal.css'
 
 
 const AddGoal = () => {
-    let navigate = useNavigate();
-    const [category, setCategory] = useState('')
-    const [budget, setBudget] = useState('')
-
-    const categoryHandler = (event) => {
-        setCategory(event.target.value);
-        console.log(event)
-    }
-
-    const budgetHandler = (event) => {
-        setBudget(event.target.value);
-    }
-
-    const addGoalHandler = (event) => {
-        data.push({
-            category: category,
-            budget: budget
-        })
-        navigate("../AddGoal", ({replace: true}));
-    }
-
-
     return (
         <div className="container">
             <div className = "column1">
@@ -58,7 +33,6 @@ const AddGoal = () => {
                     ))}
                 </div>
             </div>
-
         </div>
     )
 }
