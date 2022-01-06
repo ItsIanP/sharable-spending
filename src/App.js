@@ -17,6 +17,7 @@ import Header from './components/Header';
 import FeedPost from './components/FeedPost';
 import Login from './components/Login';
 import AddGoal from './components/AddGoal';
+import Register from './components/Register';
 import './App.css';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/Profile" element={<Profile/>}></Route>
           <Route path="/" element={<Login/>}></Route>
           <Route path="/AddGoal" element={<AddGoal/>}></Route>
+          <Route path="/Register" element={<Register/>}></Route>
         </Routes>
       </Router>
     </div>
