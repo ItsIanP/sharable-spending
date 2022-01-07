@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import './Profile.css'
 import ProfilePic from './ProfilePic.js'
 import PersonalInfo from "./PersonalInfo";
+import {setGlobalState, useGlobalState} from './globalState';
 
 const Profile = () => {
 
@@ -9,6 +10,11 @@ const Profile = () => {
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
     const [address, setAddress] = useState("");
+
+    const [userName] = useGlobalState("globalUsername")
+    const [globePhone] = useGlobalState("globalPhone")
+    const [globeEmail] = useGlobalState("globalEmail")
+    const [globeAddress] = useGlobalState("globalAddress")
 
     return (
         <div className="overall">
@@ -27,11 +33,12 @@ const Profile = () => {
                     <div className="fieldGrid">
                         <div className="username">
                             <label>Username:</label>
-                            <PersonalInfo text={username} placeholder="Username" type="input">
+                            <PersonalInfo text={username} placeholder={userName} type="input">
                                 <input
                                     type="text"
                                     name="username"
-                                    placeholder="New Username"
+                                    //Set placeholder to global variable so it loads in first
+                                    placeholder= "Username"
                                     value={username}
                                     onChange={e => setUsername(e.target.value)}
                                 />
@@ -39,38 +46,39 @@ const Profile = () => {
                         </div>
                         <div className="email">
                             <label>Email:</label>
-                            <PersonalInfo text={email} placeholder="Email Address" type="input">
+                            <PersonalInfo text={email} placeholder={globeEmail} type="input">
                                 <input
                                     type="text"
                                     name="task"
                                     placeholder="Email Address"
                                     value={email}
-                                    onChange={e => setEmail(e.target.value)}
+                                    onChange={e => {setEmail(e.target.value); setGlobalState("globalEmail", e.target.value)}}
                                 />
                             </PersonalInfo>
                         </div>
                         <div className="phone">
                             <label>Phone Number:</label>
-                            <PersonalInfo text={phone} placeholder="Phone Number" type="input">
+                            <PersonalInfo text={phone} placeholder={globePhone} type="input">
                                 <input
                                     type="text"
                                     name="phone"
                                     placeholder="Phone Number"
                                     value={phone}
-                                    onChange={e => setPhone(e.target.value)}
+                                    onChange={e => {setPhone(e.target.value); setGlobalState("globalPhone", e.target.value)}}
                                 />
                             </PersonalInfo>
                         </div>
 
                         <div className="address">
                             <label>Address:</label>
-                            <PersonalInfo text={address} placeholder="Address" type="input">
+                            <PersonalInfo text={address} placeholder={globeAddress} type="input">
                                 <input
                                     type="text"
                                     name="address"
                                     placeholder="Address"
                                     value={address}
-                                    onChange={e => setAddress(e.target.value)}
+                                    onChange={e => {setAddress(e.target.value); setGlobalState("globalAddress", e.target.value)}}
+
                                 />
                             </PersonalInfo>
                         </div>
