@@ -74,3 +74,6 @@ h1 {
   color: #455df4;
   font-family: "century-gothic", sans-serif;
 }
+.button {
+  padding: 20px;
+}

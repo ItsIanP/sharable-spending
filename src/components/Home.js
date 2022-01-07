@@ -3,10 +3,12 @@ import './Home.css'
 import IndividualExpense from './IndividualExpense'
 import {data} from '../data/ExpenseData'
 import HomePieChart from './HomePieChart';
+import ShareButton from './ShareButton';
 
 
 var res = data.map(datas => parseFloat(datas.cost)).reduce((acc, datas) => datas + acc);
 console.log(res);
+
 
 
 const Home = () => {
@@ -65,6 +67,9 @@ const Home = () => {
                     <h1 style={{"color" : "#455df4"}}>Pie Chart</h1>
                     <div class = "piechart">
                         <HomePieChart/>
+                    </div>
+                    <div className="button">
+                        <ShareButton/>
                     </div>
                 </div>
             </div>
