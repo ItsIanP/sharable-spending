@@ -1,8 +1,8 @@
 {
-  "name": "shareable-spending",
+  "name": "sharable-spending",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ItsIanP.github.io/shareable-spending",
+  "homepage": "http://ItsIanP.github.io/sharable-spending",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
