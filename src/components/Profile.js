@@ -3,6 +3,7 @@ import './Profile.css'
 import ProfilePic from './ProfilePic.js'
 import PersonalInfo from "./PersonalInfo";
 import {setGlobalState, useGlobalState} from './globalState';
+import ProfileColumnChart from './ProfileColumnChart';
 
 const Profile = () => {
 
@@ -81,6 +82,10 @@ const Profile = () => {
 
                                 />
                             </PersonalInfo>
+                        </div>
+
+                        <div className="chart">
+                        <ProfileColumnChart/>
                         </div>
                     </div>
                 </div>

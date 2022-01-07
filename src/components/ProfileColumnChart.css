@@ -1,0 +1,7 @@
+.chart{
+    display: flex;
+    align-content: center;
+    padding-top: 20px;
+    padding-right: 20px;
+    float: left;
+}
