@@ -29,7 +29,7 @@ const Profile = () => {
                 <div className="acctInfo">
                     <div className="infoHeader">
                         <h2>Account Info</h2>
-                        <p>Double click a field to change information, double-click anywhere to save</p>
+                        <p>Click a field to change information, click anywhere to save</p>
                     </div>
                     <div className="fieldGrid">
                         <div className="username">
@@ -38,6 +38,7 @@ const Profile = () => {
                                 <input
                                     type="text"
                                     name="username"
+                                    style= {{"width" : "200px"}}
                                     //Set placeholder to global variable so it loads in first
                                     placeholder= "Username"
                                     value={username}
@@ -51,6 +52,7 @@ const Profile = () => {
                                 <input
                                     type="text"
                                     name="task"
+                                    style= {{"width" : "200px"}}
                                     placeholder="Email Address"
                                     value={email}
                                     onChange={e => {setEmail(e.target.value); setGlobalState("globalEmail", e.target.value)}}
@@ -63,6 +65,7 @@ const Profile = () => {
                                 <input
                                     type="text"
                                     name="phone"
+                                    style= {{"width" : "200px"}}
                                     placeholder="Phone Number"
                                     value={phone}
                                     onChange={e => {setPhone(e.target.value); setGlobalState("globalPhone", e.target.value)}}
@@ -76,6 +79,7 @@ const Profile = () => {
                                 <input
                                     type="text"
                                     name="address"
+                                    style= {{"width" : "200px"}}
                                     placeholder="Address"
                                     value={address}
                                     onChange={e => {setAddress(e.target.value); setGlobalState("globalAddress", e.target.value)}}

@@ -1,35 +1,27 @@
 import React, { Component } from 'react';
 import CanvasJSReact from '../canvasJS/canvasjs.react';
 import {categories} from '../data/CategoriesData';
+import {data} from '../data/ExpenseData'
 import './ColumnChart.css'
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 
-//pulls random category
-function searchRandom(count, arr){
-	let answer = [], counter = 0;
-   
-	while(counter < count){
-	  let rand = arr[Math.floor(Math.random() * arr.length)];
-	  if(!answer.some(an => an === rand)){
-		answer.push(rand);
-		counter++;
-	  }
-	}
-	
-	return answer;
-  }
+var datapts = []
 
+var res = data.map(datas => parseFloat(datas.cost)).reduce((acc, datas) => datas + acc);
 
-//generates random number
-const min = 1
-const max = 100
+function createBars(data, res, categories) {
 
-  function randomNumber(min, max) {
-	min = Math.ceil(min);
-	max = Math.floor(max);
-	return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
-  }
+    for (let cat in categories) {
+        var total_per_cost = data.filter(obj => obj.category === categories[cat]).map(datas => parseFloat(datas.cost)).reduce((acc, datas) => datas + acc);
+        console.log(total_per_cost / res, total_per_cost, cat)
+
+		datapts.push({y: ((total_per_cost/res)*100), label: categories[cat]})
+    }
+}
+
+createBars(data, res, categories);
+console.log(datapts);
   
 
 
@@ -40,19 +32,21 @@ class ColumnChart extends Component {
 			title: {
 				text: "Your Spending "
 			},
+			axisY:{
+				title: "Percentage",
+				interlacedColor: "#F8F1E4",
+				tickLength: 10
+			   },
+			axisX:{
+			title: "Category",
+			tickLength: 10
+			},
 			animationEnabled: true,
 			data: [
 			{
 				// Change type to "doughnut", "line", "splineArea", etc.
 				type: "column",
-				dataPoints: [
-					{ label: searchRandom(1, categories),  y: randomNumber(min, max)  },
-					{ label: searchRandom(1, categories), y: randomNumber(min, max)  },
-					{ label: searchRandom(1, categories), y: randomNumber(min, max)  },
-					{ label: searchRandom(1, categories),  y: randomNumber(min, max)  },
-					{ label: searchRandom(1, categories),  y: randomNumber(min, max)  },
-					{ label: searchRandom(1, categories),  y: randomNumber(min, max)  },
-				]
+				dataPoints: datapts
 			}
 			]
 		}
