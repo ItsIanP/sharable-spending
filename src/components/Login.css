@@ -11,14 +11,14 @@ input {
     display: flex;
     flex-direction: column;
     
-    border: 20px solid #791605;
-    background-color: #791605;
+    border: 20px solid #ADD8E6;
+    background-color: #ADD8E6;
     color: white;
     margin-bottom: 70px;
 }
 
 h1 {
-    color: #791605;
+    color: #ADD8E6;
 }
 
 button {

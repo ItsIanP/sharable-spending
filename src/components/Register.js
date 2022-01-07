@@ -52,7 +52,7 @@ const Register = () => {
     
     return (
         <div>
-            <h1>Register</h1>
+            <h1 style={{"color" : "#455df4"}}>Register</h1>
             <div className="login">
                 <label>Username</label>
                 <input onChange={usernameHandler}></input>

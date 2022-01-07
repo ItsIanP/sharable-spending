@@ -28,7 +28,7 @@ const Profile = () => {
                 </div>
                 <div className="acctInfo">
                     <div className="infoHeader">
-                        <h2>Account Info</h2>
+                        <h2 style={{"color" : "#455df4"}}>Account Info</h2>
                         <p>Click a field to change information, click anywhere to save</p>
                     </div>
                     <div className="fieldGrid">

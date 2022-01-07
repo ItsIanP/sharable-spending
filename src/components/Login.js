@@ -29,7 +29,7 @@ const Login = () => {
 
     return (
         <div>
-            <h1>Login</h1>
+            <h1 style={{"color" : "#455df4"}}>Login</h1>
             <div className="login">
                 <label>Username</label>
                 <input onChange={usernameHandler}></input>

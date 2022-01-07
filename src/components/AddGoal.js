@@ -35,7 +35,7 @@ const AddGoal = () => {
     return (
         <div>
             <div className = "column1">
-            <h1>Add Your Goal</h1>
+            <h1 style={{"color" : "#455df4"}}>Add Your Goal</h1>
             <div className = "form">
                 <label className="label">Categories</label>
                 <select className="select" onChange={categoryHandler}> 
@@ -52,7 +52,7 @@ const AddGoal = () => {
 
         
             <ol className="column2">
-                <h1>Your Current Goals this Month:</h1>
+                <h1 style={{"color" : "#455df4"}}>Your Current Goals this Month:</h1>
                 <div className="goals">
                     {data.map((goal) => (
                         <li><Goal category={goal.category} budget={goal.budget}/>
