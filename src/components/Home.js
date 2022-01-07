@@ -12,10 +12,10 @@ console.log(res);
 const Home = () => {
     return (
         <div class = "container">
-            <h1>Homepage</h1>
+            <h1 style={{"color" : "#455df4"}}>Homepage</h1>
             <div class = "row">
                 <div class = "column1">
-                    <h1>Balance</h1>
+                    <h1 style={{"color" : "#455df4"}}>Balance</h1>
                     <table>
                         <tr>
                             <th>Balance</th>
@@ -28,7 +28,7 @@ const Home = () => {
                     </table>
                     <br></br>
 
-                    <h1>Transactions</h1>
+                    <h1 style={{"color" : "#455df4"}}>Transactions</h1>
                     <table>
                         <tr>
                             <th>Date</th>
@@ -62,7 +62,7 @@ const Home = () => {
                 </div>
 
                 <div class = "column2">
-                    <h1>Pie Chart</h1>
+                    <h1 style={{"color" : "#455df4"}}>Pie Chart</h1>
                     <div class = "piechart">
                         <HomePieChart/>
                     </div>
