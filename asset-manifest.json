@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sharable-spending/static/css/main.7d0eb59a.css",
+    "main.js": "/sharable-spending/static/js/main.855c7610.js",
+    "static/js/787.23165d41.chunk.js": "/sharable-spending/static/js/787.23165d41.chunk.js",
+    "index.html": "/sharable-spending/index.html",
+    "main.7d0eb59a.css.map": "/sharable-spending/static/css/main.7d0eb59a.css.map",
+    "main.855c7610.js.map": "/sharable-spending/static/js/main.855c7610.js.map",
+    "787.23165d41.chunk.js.map": "/sharable-spending/static/js/787.23165d41.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d0eb59a.css",
+    "static/js/main.855c7610.js"
+  ]
+}
