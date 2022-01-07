@@ -17,7 +17,6 @@ const Feed = () => {
             <FeedPost/>
             <FeedPost/>
             <FeedPost/>
-            <ColumnChart/>
             
             </div>
         </div>
