@@ -42,7 +42,7 @@ const Goal = ({category, budget}) => {
         <p>Spending progress:</p>
         {/* <progress id="file" value = "70" max="100"></progress> */}
         <progress id="file" value = {calculate(budget)[Math.floor(Math.random() * 7)].y} max="100"></progress>
-              
+
     </div>
 
     )
