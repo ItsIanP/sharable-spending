@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CanvasJSReact from '../canvasJS/canvasjs.react';
 import {categories} from '../data/CategoriesData';
+import './ColumnChart.css'
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 
@@ -35,9 +36,9 @@ const max = 100
 class ColumnChart extends Component {
 		render() {
 		const options = {
-			width: 800,
+			width: 650,
 			title: {
-				text: "Your Spending"
+				text: "Your Spending "
 			},
 			animationEnabled: true,
 			data: [
@@ -57,7 +58,7 @@ class ColumnChart extends Component {
 		}
 		
 		return (
-		<div>
+		<div className="bar">
 			<CanvasJSChart options = {options} 
 				/* onRef={ref => this.chart = ref} */
 			/>

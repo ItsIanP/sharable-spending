@@ -57,3 +57,8 @@ p {
     text-align: right;
     font-weight: bold;
 }
+
+.chart{
+    display: grid;
+
+}
