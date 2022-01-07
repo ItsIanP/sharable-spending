@@ -9,7 +9,7 @@ import ProfileColumnChart from './ColumnChart'
 const Feed = () => {
     return (
         <div>
-            <h1 className = "title" style={{"color" : "#455df4"}}>Feed</h1>
+            <h1 className = "title">Feed</h1>
             <div className = "feed">
             <FeedPost/>
             <FeedPost/>
