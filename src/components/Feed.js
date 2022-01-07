@@ -18,8 +18,6 @@ const Feed = () => {
             <FeedPost/>
             <FeedPost/>
             <FeedPost/>
-            
-            <ProfileColumnChart/>
             </div>
         </div>
     )
