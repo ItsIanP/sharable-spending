@@ -1,9 +1,14 @@
 .feed{
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     flex-wrap: wrap;
-    padding: 75px;
-    flex-flow: row wrap;
+    padding: 10px;
+    flex-direction: column;
     
     }
+
+.title{
+    font-size: 50px;
+}
