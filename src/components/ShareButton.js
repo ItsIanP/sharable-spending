@@ -5,7 +5,7 @@ import HomePieChart from './HomePieChart'
 const ShareButton = () => {
     return (
         <div>
-            <button>Share</button>
+            <button style = {{"width": "220px"}}>Share Your Pie Chart!</button>
         </div>
     )
 }

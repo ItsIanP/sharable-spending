@@ -28,7 +28,7 @@ class HomePieChart extends Component {
 		const options = {
 			width: 900,
 			height: 600,
-			theme: "dark2",
+			theme: "light2",
 			animationEnabled: true,
 			exportFileName: "Spending",
 			exportEnabled: true,
