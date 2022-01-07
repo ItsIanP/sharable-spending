@@ -6,14 +6,6 @@
 }
 
 
-
-/* .form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
-
 .column1 {
     border:2px;
     width:32%;
@@ -22,7 +14,6 @@
     margin-left:6%;
     margin-right:2%; 
 }
-
 .column2 {
     border:2px;
     width:45%;
@@ -32,28 +23,29 @@
     margin-right:6%;  
 }
 
-input {
+.input {
     display: flex;
     width: 260px;
     margin-bottom: 20px;
     margin-top: 10px;
-    margin-left: 100px;
+    margin-left: 110px;
 }
 
-select {
+.select {
     display: flex;
     width: 260px;
     margin-bottom: 20px;
     margin-top: 10px;
-    margin-left: 100px;
+   
 }
 
-label {
+.label {
     display: flex;
     font-size: 18px;
+    font-size: 17px;
     margin-bottom: 10px; 
     margin-top: 10px;
-    margin-left: 100px;
+    margin-left: 110px;
 }
 
 button {
@@ -65,4 +57,7 @@ button {
 .goals {
     font-size: 15px;
     margin-right: 200px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 600px;
 }

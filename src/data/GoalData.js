@@ -1,6 +1,6 @@
 export const data = [
     {
-        category: "Vaction",
-        budget: "7"
+        category: "Vacation",
+        budget: "200"
     }
 ]

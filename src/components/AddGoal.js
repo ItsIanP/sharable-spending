@@ -1,24 +1,26 @@
 import React, {useState} from 'react'
 import Goal from './Goal'
 import {data} from '../data/GoalData'
+import {categories} from '../data/CategoriesData'
 import { useNavigate } from 'react-router-dom'
 import './AddGoal.css'
+
 
 
 const AddGoal = () => {
     let navigate = useNavigate();
     const [category, setCategory] = useState('')
-    const [budget, setBudget] = useState('')
+    const [budget, setBudget] = useState(0)
+
+
 
     const categoryHandler = (event) => {
         setCategory(event.target.value);
-        console.log(event)
     }
-
     const budgetHandler = (event) => {
         setBudget(event.target.value);
     }
-
+    
     const addGoalHandler = (event) => {
         data.push({
             category: category,
@@ -28,30 +30,40 @@ const AddGoal = () => {
     }
 
 
+
+
     return (
         <div>
+            <div className = "column1">
             <h1>Add Your Goal</h1>
             <div className = "form">
-                <label>Categories</label>
-                <select onChange={categoryHandler}>           
-                        <option>Shopping</option>
-                        <option>Restaurant and Dining</option>
-                        <option>Home and Utilities</option>
+                <label className="label">Categories</label>
+                <select className="select" onChange={categoryHandler}> 
+                        <option>Select:</option> 
+                        {categories.map((categ) => (
+                            <option>{categ}</option>
+                        ))}
                 </select>
-                <label>Budget Limit</label>
-                <input onChange={budgetHandler}></input>
-                <button onClick={addGoalHandler}>Add Goal</button>
+                <label className="label">Budget Limit</label>
+                <input className="input" onChange={budgetHandler}></input>
+                <button type="button" onClick={addGoalHandler}>Add Goal</button>
+            </div>
             </div>
 
-            <h1>Your Current Goals this Month:</h1>
-            <div className="goals">
-                {data.map((goal) => (
-                    <Goal category={goal.category} budget={goal.budget}/>
-                ))}
-            </div>
+        
+            <ol className="column2">
+                <h1>Your Current Goals this Month:</h1>
+                <div className="goals">
+                    {data.map((goal) => (
+                        <li><Goal category={goal.category} budget={goal.budget}/>
+                        </li>
 
-        </div>
+                    ))}
+
+                </div>
+            </ol>
+            </div>
+     
     )
 }
-
 export default AddGoal
