@@ -1,7 +1,8 @@
 import React from 'react'
 import HomePieChart from './HomePieChart'
+import {useNavigate } from 'react-router-dom'
 
-
+let navigate = useNavigate();
 const feedHandler = (event) => {
     navigate("../Feed", ({replace: true}));
 }
