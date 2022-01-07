@@ -1,15 +1,43 @@
 import React, { Component } from 'react';
 import CanvasJSReact from '../canvasJS/canvasjs.react';
+import {categories} from '../data/CategoriesData';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
- 
-//Data is hard-coded right now.
+
+
+//pulls random category
+function searchRandom(count, arr){
+	let answer = [], counter = 0;
+   
+	while(counter < count){
+	  let rand = arr[Math.floor(Math.random() * arr.length)];
+	  if(!answer.some(an => an === rand)){
+		answer.push(rand);
+		counter++;
+	  }
+	}
+	
+	return answer;
+  }
+
+
+//generates random number
+const min = 1
+const max = 100
+
+  function randomNumber(min, max) {
+	min = Math.ceil(min);
+	max = Math.floor(max);
+	return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+  }
+  
+
 
 class ColumnChart extends Component {
 		render() {
 		const options = {
 			width: 800,
 			title: {
-				text: "Basic Column Chart"
+				text: "Your Spending"
 			},
 			animationEnabled: true,
 			data: [
@@ -17,11 +45,12 @@ class ColumnChart extends Component {
 				// Change type to "doughnut", "line", "splineArea", etc.
 				type: "column",
 				dataPoints: [
-					{ label: "Apple",  y: 10  },
-					{ label: "Orange", y: 15  },
-					{ label: "Banana", y: 25  },
-					{ label: "Mango",  y: 30  },
-					{ label: "Grape",  y: 28  }
+					{ label: searchRandom(1, categories),  y: randomNumber(min, max)  },
+					{ label: searchRandom(1, categories), y: randomNumber(min, max)  },
+					{ label: searchRandom(1, categories), y: randomNumber(min, max)  },
+					{ label: searchRandom(1, categories),  y: randomNumber(min, max)  },
+					{ label: searchRandom(1, categories),  y: randomNumber(min, max)  },
+					{ label: searchRandom(1, categories),  y: randomNumber(min, max)  },
 				]
 			}
 			]

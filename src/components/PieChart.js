@@ -2,15 +2,44 @@ import { findByLabelText } from '@testing-library/react';
 import React, { Component } from 'react';
 import CanvasJSReact from '../canvasJS/canvasjs.react';
 import './PieChart.css';
+import {categories} from '../data/CategoriesData';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
-//Data is hard-coded right now.
  
+
+
+//pulls random category
+function searchRandom(count, arr){
+	let answer = [], counter = 0;
+   
+	while(counter < count){
+	  let rand = arr[Math.floor(Math.random() * arr.length)];
+	  if(!answer.some(an => an === rand)){
+		answer.push(rand);
+		counter++;
+	  }
+	}
+	
+	return answer;
+  }
+
+
+//generates random number
+const min = 1
+const max = 25
+
+  function randomNumber(min, max) {
+	min = Math.ceil(min);
+	max = Math.floor(max);
+	return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+  }
+  
+
 class PieChart extends Component {
 	render() {
 		const options = {
-			width: 400,
-			height: 420,
+			width: 700,
+			height: 620,
 			theme: "dark2",
 			animationEnabled: true,
 			exportFileName: "Spending",
@@ -23,15 +52,15 @@ class PieChart extends Component {
 				showInLegend: true,
 				legendText: "{label}",
 				toolTipContent: "{label}: <strong>{y}%</strong>",
-				indexLabel: "{y}%",
+				indexLabel: "",
 				indexLabelPlacement: "inside",
 				dataPoints: [
-					{ y: 32, label: "Chipotle" },
-					{ y: 22, label: "AMC" },
-					{ y: 15, label: "Netflix" },
-					{ y: 19, label: "Disney+" },
-					{ y: 5, label: "Starbucks" },
-					{ y: 7, label: "Groceries" }
+					{ y: randomNumber(min, max), label: searchRandom(1, categories) },
+					{ y: randomNumber(min, max), label: searchRandom(1, categories) },
+					{ y: randomNumber(min, max), label: searchRandom(1, categories) },
+					{ y: randomNumber(min, max), label: searchRandom(1, categories) },
+					{ y: randomNumber(min, max), label: searchRandom(1, categories) },
+					{ y: randomNumber(min, max), label: searchRandom(1, categories) }
 				]
 			}]
 		}
