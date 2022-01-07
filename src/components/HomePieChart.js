@@ -1,8 +1,9 @@
+import { findByLabelText } from '@testing-library/react';
 import React, { Component } from 'react';
 import CanvasJSReact from '../canvasJS/canvasjs.react';
-import {categories} from '../data/CategoriesData';
+import './PieChart.css';
 import {data} from '../data/ExpenseData'
-import './ColumnChart.css'
+import {categories} from '../data/CategoriesData'
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 
@@ -10,49 +11,43 @@ var datapts = []
 
 var res = data.map(datas => parseFloat(datas.cost)).reduce((acc, datas) => datas + acc);
 
-function createBars(data, res, categories) {
+function createWedges(data, res, categories) {
 
     for (let cat in categories) {
         var total_per_cost = data.filter(obj => obj.category === categories[cat]).map(datas => parseFloat(datas.cost)).reduce((acc, datas) => datas + acc);
         console.log(total_per_cost / res, total_per_cost, cat)
 
-		datapts.push({y: ((total_per_cost/res)*100), label: categories[cat]})
+		datapts.push({y: ((total_per_cost/res)*100).toFixed(2), label: categories[cat]})
     }
 }
 
-createBars(data, res, categories);
-console.log(datapts);
-  
-
-
-class ColumnChart extends Component {
-		render() {
+createWedges(data, res, categories);
+ 
+class HomePieChart extends Component {
+	render() {
 		const options = {
-			width: 650,
-			title: {
-				text: "Your Spending "
-			},
-			axisY:{
-				title: "Percentage",
-				interlacedColor: "#F8F1E4",
-				tickLength: 10
-			   },
-			axisX:{
-			title: "Category",
-			tickLength: 10
-			},
+			width: 900,
+			height: 600,
+			theme: "dark2",
 			animationEnabled: true,
-			data: [
-			{
-				// Change type to "doughnut", "line", "splineArea", etc.
-				type: "column",
+			exportFileName: "Spending",
+			exportEnabled: true,
+			title:{
+				text: "Monthly Spending"
+			},
+			data: [{
+				type: "pie",
+				showInLegend: true,
+				legendText: "{label}",
+				toolTipContent: "{label}: <strong>{y}%</strong>",
+				indexLabel: "{y}%",
+				indexLabelPlacement: "inside",
 				dataPoints: datapts
-			}
-			]
+			}]
 		}
 		
 		return (
-		<div className="bar">
+		<div className = "pie">
 			<CanvasJSChart options = {options} 
 				/* onRef={ref => this.chart = ref} */
 			/>
@@ -62,4 +57,4 @@ class ColumnChart extends Component {
 	}
 }
 
-export default ColumnChart;
+export default HomePieChart;

@@ -2,29 +2,30 @@ import React from 'react'
 import './Home.css'
 import IndividualExpense from './IndividualExpense'
 import {data} from '../data/ExpenseData'
+import HomePieChart from './HomePieChart';
+
+
+var res = data.map(datas => parseFloat(datas.cost)).reduce((acc, datas) => datas + acc);
+console.log(res);
+
 
 const Home = () => {
     return (
         <div class = "container">
-            <h1>Shareable Spending! Homepage</h1>
+            <h1>Homepage</h1>
             <div class = "row">
                 <div class = "column1">
                     <h1>Balance</h1>
-                    <p>$3500</p>
-                    <br></br>
-
-                    <h1>Add a Transaction</h1>
-                    <div className="form">
-                        <label>Date</label>
-                        <input></input>
-                        <label>Location</label>
-                        <input></input>
-                        <label>Cost</label>
-                        <input></input>
-                        <label>Category</label>
-                        <input></input>
-                        <button>Add Transaction</button>
-                    </div>
+                    <table>
+                        <tr>
+                            <th>Balance</th>
+                            <th>Amount Spent this Month</th>
+                        </tr>
+                        <tr>
+                            <td>3500.00</td>
+                            <td>1542.33</td>
+                        </tr>
+                    </table>
                     <br></br>
 
                     <h1>Transactions</h1>
@@ -62,6 +63,9 @@ const Home = () => {
 
                 <div class = "column2">
                     <h1>Pie Chart</h1>
+                    <div class = "piechart">
+                        <HomePieChart/>
+                    </div>
                 </div>
             </div>
         </div>

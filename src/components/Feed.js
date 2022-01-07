@@ -1,6 +1,8 @@
 import React from 'react'
 import './Feed.css'
 import FeedPost from "./FeedPost"
+import ColumnChart from './ColumnChart'
+import ProfileColumnChart from './ColumnChart'
 
 //the posts have been left in just in case.
 
@@ -16,7 +18,6 @@ const Feed = () => {
             <FeedPost/>
             <FeedPost/>
             <FeedPost/>
-            
             </div>
         </div>
     )

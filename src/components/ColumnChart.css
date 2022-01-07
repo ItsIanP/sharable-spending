@@ -1,0 +1,7 @@
+.bar{
+    display: flex;
+    align-content: left;
+    padding: 20px;
+    float: left;
+    justify-self: flex-start;
+}

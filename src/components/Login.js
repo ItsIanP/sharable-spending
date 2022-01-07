@@ -1,14 +1,17 @@
 import React, {useState} from 'react'
 import {useNavigate } from 'react-router-dom'
 import './Login.css'
+import {setGlobalState, useGlobalState} from './globalState';
 
 const Login = () => {
     let navigate = useNavigate();
     const[username, setUsername] = useState('')
     const[password, setPassword] = useState('')
+    const [globalUser, setGlobalUser] = useState('')
 
     const usernameHandler = (event) => {
         setUsername(event.target.value);
+        setGlobalState("globalUsername", event.target.value);
     }
 
     const passwordHandler = (event) => {
