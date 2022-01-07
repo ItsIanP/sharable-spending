@@ -36,6 +36,7 @@ const Login = () => {
                 <label>Password</label>
                 <input onChange={passwordHandler}></input>
                 <button onClick={loginHandler}>Login</button>
+                <br></br>
                 <button onClick={registerHandler}>Register</button>
             </div>
         </div>

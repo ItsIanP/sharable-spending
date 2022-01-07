@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {useNavigate } from 'react-router-dom'
 import './Login.css'
+import './Register.css'
 import {setGlobalState, useGlobalState} from './globalState';
 
 
@@ -62,7 +63,7 @@ const Register = () => {
                 <input onChange={bankIDHandler}></input>
                 <label>Bank Account Password</label>
                 <input onChange={bankPasswordHandler}></input>
-                <button onClick={registerHandler}>Register</button>
+                <button className="button" onClick={registerHandler}>Register</button>
             </div>
         </div>
     )
