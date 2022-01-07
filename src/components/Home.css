@@ -21,16 +21,16 @@
   width:25%;
   float: left;
   height:100%; 
-  margin-left:6%;
+  margin-left:12%;
   margin-right:2%;     
 }
 .column2 {
   border:2px;
-  width:59%;
+  width:53%;
   float:left;
   height:100%;
-  margin-left:2%; 
-  margin-right:6%;    
+  margin-left:8%; 
+  margin-right:0%;    
 }
 
 th {
@@ -63,4 +63,8 @@ input {
   margin-bottom: 20px;
   margin-top: 10px;
   width: 20px;
+}
+
+.piechart {
+  text-align: center;
 }
